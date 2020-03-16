@@ -1,0 +1,280 @@
+@import "@/assets/css/variables.scss";
+
+@font-face {
+   font-family: 'badaboom';
+   src: url('~@/assets/fonts/badabb__-webfont.eot');
+   src: url('~@/assets/fonts/badabb__-webfont.eot?#iefix') format('embedded-opentype'),
+        url('~@/assets/fonts/badabb__-webfont.woff2') format('woff2'),
+        url('~@/assets/fonts/badabb__-webfont.woff') format('woff'),
+        url('~@/assets/fonts/badabb__-webfont.ttf') format('truetype'),
+        url('~@/assets/fonts/badabb__-webfont.svg#badaboom') format('svg');
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'proxima';
+   src: url('~@/assets/fonts/proxima-webfont.eot');
+   src: url('~@/assets/fonts/proxima-webfont.eot?#iefix') format('embedded-opentype'),
+        url('~@/assets/fonts/proxima-webfont.woff2') format('woff2'),
+        url('~@/assets/fonts/proxima-webfont.woff') format('woff'),
+        url('~@/assets/fonts/proxima-webfont.ttf') format('truetype'),
+        url('~@/assets/fonts/proxima-webfont.svg#proxima') format('svg');
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'proxima'; /* bold */
+   src: url('~@/assets/fonts/proxima-bold-webfont.eot');
+   src: url('~@/assets/fonts/proxima-bold-webfont.eot?#iefix') format('embedded-opentype'),
+        url('~@/assets/fonts/proxima-bold-webfont.woff2') format('woff2'),
+        url('~@/assets/fonts/proxima-bold-webfont.woff') format('woff'),
+        url('~@/assets/fonts/proxima-bold-webfont.ttf') format('truetype'),
+        url('~@/assets/fonts/proxima-bold-webfont.svg#proxima') format('svg');
+   font-weight: bold;
+   font-style: normal;
+}
+
+body{
+   background-color: $backgroundColor;
+}
+
+body,p{
+   font-family: 'proxima';
+   font-size: 18px;
+   color: $txtColor;
+}
+
+h1,h2,h3,h4{
+   font-family: 'badaboom';
+}
+
+h5{
+   font-family: 'proxima';
+   font-weight: bold;
+   font-size: 1.5rem;
+}
+
+h2{
+   font-size: 3rem;
+   @media (max-width: 575px) {
+      font-size: 35px;
+      text-align: center;
+      margin: 10px 0 20px 0;
+    }
+}
+
+a:not(.wo-btn){
+   color: $txtColor;
+   &:hover{
+      text-decoration: none;
+      opacity: 0.7;
+   }
+}
+
+::-moz-selection {
+   background: #e7e7e7 !important;
+}
+ 
+::selection {
+   background: #e7e7e7 !important;
+}
+
+button:not(.close), .wo-btn, .btn{
+   background-image: $backgroundImgMain;
+   border: 2px solid $woBlack;
+   color: $txtColor;
+   font-size: 21px;
+   padding: 5px 20px;
+   border-radius: 0;
+   -webkit-box-shadow: 3px 4px 0px 0px rgba(0, 0, 0, 0.75);
+   -moz-box-shadow: 3px 4px 0px 0px rgba(0, 0, 0, 0.75);
+   box-shadow: 3px 4px 0px 0px rgba(0, 0, 0, 0.75);
+   &:hover{
+      background: white;
+      color: $txtColor;
+      text-decoration: none;
+   }
+}
+
+.btn:focus, .btn.focus {
+   -webkit-box-shadow: 3px 4px 0px 0px rgba(0, 0, 0, 0.75);
+   -moz-box-shadow: 3px 4px 0px 0px rgba(0, 0, 0, 0.75);
+   box-shadow: 3px 4px 0px 0px rgba(0, 0, 0, 0.75);
+}
+
+.modal-content{
+   background-image: $backgroundImgMain;
+   border-radius: 0;
+   .close{
+      margin: -1rem -1rem -1.5rem auto;
+   }
+}
+
+.modal-header {
+   border-bottom: none;
+   padding-bottom: 0.5rem;
+}
+
+.modal-footer {
+   border-top: none;
+}
+
+.close{
+   font-size: 2rem;
+}
+
+.form-control{
+   background-color: #fff!important;
+}
+
+.form-control:focus  {
+   box-shadow: none;
+   border-color: #252525;
+   @media (min-width: 576px) {
+      border-color: #ced4da;
+   }
+}
+
+.wo-head-bg {
+   height: 14rem;
+   background-image: $backgroundImg;
+   text-align: center;
+   @media (min-width: 576px) {
+     height: 26rem;
+   }
+}
+
+.wo-head-bg-new-user{
+   height: 18rem;
+   @media (min-width: 576px) {
+      height: 23rem;
+    }
+}
+
+.wo-head-bg-not-home{
+   height: 13rem;
+   @media (min-width: 576px) {
+      height: 23rem;
+   }
+}
+
+.wo-main {
+   background: $backgroundColor;
+   padding: 15px;
+   @media (min-width: 576px) {
+     background: white;
+     background-image: $backgroundImgMain;
+     margin-top: -4em;
+      padding: 30px 30px 60px 30px;
+     margin-bottom: 10rem;
+   }
+}
+
+.wo-shadow {
+   -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+   -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+}
+
+.wo-shadow-sm {
+   @media (min-width: 576px) {
+      -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+   }
+}
+
+.wo-box-shadow{
+   -webkit-box-shadow: 7px 8px 0px 0px rgba(0, 0, 0, 0.75);
+   -moz-box-shadow: 7px 8px 0px 0px rgba(0, 0, 0, 0.75);
+   box-shadow: 7px 8px 0px 0px rgba(0, 0, 0, 0.75);
+}
+
+.wo-box-shadow-sm{
+   @media (min-width: 576px) {
+      -webkit-box-shadow: 7px 8px 0px 0px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 7px 8px 0px 0px rgba(0, 0, 0, 0.75);
+      box-shadow: 7px 8px 0px 0px rgba(0, 0, 0, 0.75);
+   }
+}
+
+.wo-border{
+   border: 3px solid $woBlack;
+}
+
+.wo-head-wrapper {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.wo-head {
+   width: auto;
+   margin-top: 2rem;
+   background-color: white;
+   background-image: $backgroundImgMain;
+   @media (min-width: 576px) {
+      margin-top: 3rem;
+      width: auto;
+   }
+   h1 {
+      font-size: 3.2rem;
+      padding-top: 0.5rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      @media (max-width: 350px) {
+         font-size: 42px;
+         padding-top: 11px;
+      }
+      @media (min-width: 576px) {
+         padding-left: 1rem;
+         padding-right: 1rem;
+         font-size: 5rem;
+      }
+   }
+}
+
+.wo-searchbar {
+   margin-top: 1.5rem;
+   @media (min-width: 576px) {
+      margin-top: 3rem;
+      padding: 1.5rem !important;
+      background: white;
+      background-image: $backgroundImgMain;
+   }
+}
+
+.wo-head-input {
+   font-size: 1.5rem;
+   border-radius: 0;
+   @media (max-width: 575px) {
+      border: 2px solid $woBlack;
+   }
+}
+
+.wo-sticky-input{
+   position: fixed;
+   left: 50%;
+   transform: translate(-50%, 0);
+   top: 15px;
+   margin: 0;
+   z-index: 1;
+   @media (min-width: 576px) {
+      top: 0;
+   }
+}
+
+.wo-user-actions{
+   text-align: right;
+   margin-right: 2px;
+   .wo-btn{
+      padding: 2px 7px 3px 7px;
+      border-radius: 50%;
+      box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 0.75);
+   }
+   @media (min-width: 576px) {
+      float: right;
+   }
+}
